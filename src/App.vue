@@ -10,17 +10,17 @@
 
 <script>
 import siteMenu from "./components/site-menu.vue";
+import inViewportDirective from "vue-in-viewport-directive";
 
 export default {
   name: "App",
   components: {
     siteMenu
-  }, 
+  },
   methods: {
-    afterEnter(){
+    afterEnter() {
       // after route enters
     }
-    
   }
 };
 </script>

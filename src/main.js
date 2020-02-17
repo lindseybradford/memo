@@ -6,7 +6,11 @@ import VueRouter from "vue-router";
 
 import routes from "./routes";
 
+import inViewportDirective from "vue-in-viewport-directive";
+Vue.directive("in-viewport", inViewportDirective);
+
 Vue.config.productionTip = false;
+
 
 Vue.use(VueRouter);
 
