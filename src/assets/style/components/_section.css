@@ -1,0 +1,41 @@
+.section {
+  @apply pb-10;
+  &--hero {
+    .section__aside {
+      @apply border-t border-black pt-8;
+    }
+    .section__main__header {
+      @apply mb-8;
+    }
+  }
+}
+
+/* MD */
+@screen md {
+  .section {
+    @apply pb-20;
+    &--hero {
+      .section__aside {
+        @apply pt-10;
+      }
+      .section__main {
+        @apply border-t border-black pt-10;
+      }
+      .section__main__header {
+        @apply mb-10;
+      }
+    }
+  }
+}
+
+/* MD */
+@screen md {
+  .section {
+    @apply pb-32;
+  }
+}
+
+/* Misc */
+.top-rule {
+    @apply border-t border-black pt-10
+}

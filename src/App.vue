@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <siteMenu />
+    <site-menu />
 
     <transition name="fade" mode="out-in" v-on:after-enter="afterEnter" appear>
       <router-view />
@@ -9,11 +9,10 @@
 </template>
 
 <script>
-import siteMenu from "./components/site-menu.vue";
-import inViewportDirective from "vue-in-viewport-directive";
+import siteMenu from "./components/siteMenu.vue";
 
 export default {
-  name: "App",
+  name: "Memo",
   components: {
     siteMenu
   },

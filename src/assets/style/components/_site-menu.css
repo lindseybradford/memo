@@ -1,0 +1,25 @@
+.site-menu {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  @screen lg {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+  }
+
+  @screen md {
+    &__nav {
+      @apply flex justify-end;
+    }
+  }
+
+  &__name {
+    @apply text-sm leading-tight font-medium;
+  }
+  &__nav__link {
+    @apply text-sm leading-tight font-medium;
+
+    &:not(:first-child) {
+      @apply pl-4;
+    }
+  }
+}

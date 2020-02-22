@@ -1,22 +1,35 @@
 // main.js
-
+// Import
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
-
 import routes from "./routes";
-
 import inViewportDirective from "vue-in-viewport-directive";
-Vue.directive("in-viewport", inViewportDirective);
+import {aspectRatio} from "./directives/aspectRatioDirective";
 
+
+// Config
 Vue.config.productionTip = false;
 
-
+// Router
 Vue.use(VueRouter);
 
-const router = new VueRouter({mode: 'history', routes });
+const router = new VueRouter({ mode: "history", routes });
 
+// Meta
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
+
+
+// Directive
+Vue.directive("in-viewport", inViewportDirective);
+Vue.directive("get-ratio", aspectRatio);
+
+// New
 new Vue({
-    render: h => h(App),
-    router
+  render: h => h(App),
+  router
 }).$mount("#app");
+

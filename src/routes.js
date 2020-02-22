@@ -1,13 +1,33 @@
 // routes.js
 
 import home from "./layouts/home.vue";
-const hire = () => import(/* webpackChunkName: "secondary" */ './layouts/hire.vue')
-const error = () => import(/* webpackChunkName: "secondary" */ './layouts/404.vue')
+const contact = () =>
+  import(/* webpackChunkName: "secondary" */ "./layouts/contact.vue");
+const error = () =>
+  import(/* webpackChunkName: "secondary" */ "./layouts/404.vue");
 
 const routes = [
-    { path: "/", component: home },
-    { path: "/hire", component: hire },
-    { path: "/404", component: error }
+  {
+    path: "/",
+    component: home,
+    meta: {
+      title: "Memo"
+    }
+  },
+  {
+    path: "/contact",
+    component: contact,
+    meta: {
+      title: "Memo | Contact"
+    }
+  },
+  {
+    path: "/404",
+    component: error,
+    meta: {
+      title: "Memo | 404"
+    }
+  }
 ];
 
 export default routes;

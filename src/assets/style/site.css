@@ -2,6 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import './core/_layout-transition.css';
+@import './core/_lazy.css';
+@import './core/_fundamental.css';
+@import './core/_the-grid.css';
+@import './components/_site-menu.css';
+@import './components/_section.css';
+@import './components/_portfolio-card.css';
+@import './core/_ratio.css';
 @import './core/_header.css';
+@import './core/_article.css';
 
+
+/* @import './core/_layout-transition.css';
+ */
+
+/* 
+
+.spacer {
+    height: 1000px;
+    @apply bg-indigo;
+  } */

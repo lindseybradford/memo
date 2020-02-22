@@ -1,0 +1,65 @@
+/* Small */
+.grid {
+  display: grid;
+  grid-template-columns: [main] 100% [end];
+  grid-row-gap: 2rem;
+  @apply justify-center pr-8 pl-8;
+
+  &.-edge-to-edge {
+    @apply pl-0 pr-0;
+  }
+}
+
+/* MD */
+@screen md {
+  /* Primary Grid (2 col narrow/wide)*/
+  .grid--primary {
+    grid-template-columns: [aside] 20% [main] 70% [end];
+    grid-column-gap: 2.5%;
+    grid-row-gap: 0rem;
+    @apply pr-4 pl-4;
+
+    .grid-item {
+      &--aside {
+        grid-column: aside / main;
+      }
+      &--main {
+        grid-column: main / end;
+      }
+    }
+  }
+
+  /* Secondary Content Grid (2 col, wide/narrow, usually nested inside primary grid) */
+  .grid--secondary {
+    grid-template-columns: [main] 66% [aside] 24% [end];
+    grid-column-gap: 2.5%;
+    @apply justify-start;
+    .grid-item {
+      &--main {
+        grid-column: main / aside;
+      }
+      &--aside {
+        grid-column: aside / end;
+      }
+    }
+  }
+  /* Card Grid */
+  .grid--card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 2.5%;
+  }
+}
+
+@screen xl {
+  .grid--primary {
+    grid-template-columns: [aside] 276px [main] 892px [end];
+    grid-column-gap: 2rem;
+  }
+  .grid--secondary {
+    grid-template-columns: [main] 584 [aside] 1fr [end];
+    grid-column-gap: 2rem;
+  }
+  .grid--card {
+    grid-column-gap: 2rem;
+  }
+}

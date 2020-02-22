@@ -34,7 +34,12 @@ Extensions: `postcss-preset-env` provides support for CSS imports, nested rules,
 
 [more info](https://tailwindcss.com/docs/using-with-preprocessors/#using-postcss-as-your-preprocessor)
 
-# Plans
+### Branches
+1. Courtney -> `profile-c`
+2. Lindsey -> `profile-l`
+3. boilerplate -> `master`
+
+*Steps*
 1. pipeline
 2. structure
 3. fonts

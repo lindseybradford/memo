@@ -1,7 +1,14 @@
+.header-sm {
+  @apply text-sm leading-snug font-medium;
+}
 
-.home {
-    h2 {
-        font-size: 2rem;
-    }
-}   
+.header-xl {
+  @apply text-4xl leading-snug;
+}
 
+@screen xl {
+  .header-xl {
+    @apply text-6xl;
+    letter-spacing: -0.01em;
+  }
+}

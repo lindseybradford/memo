@@ -1,0 +1,5 @@
+.portfolio-card {
+    figcaption {
+        @apply text-sm pt-3;
+    }
+}
