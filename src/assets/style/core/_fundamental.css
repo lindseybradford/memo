@@ -1,3 +1,6 @@
+html {
+  margin-left: calc(100vw - 100%);
+}
 body {
-    @apply text-black bg-blue;
+  @apply text-black bg-blue;
 }

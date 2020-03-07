@@ -56,7 +56,7 @@
     grid-column-gap: 2rem;
   }
   .grid--secondary {
-    grid-template-columns: [main] 584 [aside] 1fr [end];
+    grid-template-columns: [main] 584px [aside] 1fr [end];
     grid-column-gap: 2rem;
   }
   .grid--card {

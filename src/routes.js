@@ -11,21 +11,24 @@ const routes = [
     path: "/",
     component: home,
     meta: {
-      title: "Memo"
+      title: "Memo",
+      transitionName: 'fade'
     }
   },
   {
     path: "/contact",
     component: contact,
     meta: {
-      title: "Memo | Contact"
+      title: "Memo | Contact",
+      transitionName: 'modal'
     }
   },
   {
     path: "/404",
     component: error,
     meta: {
-      title: "Memo | 404"
+      title: "Memo | 404",
+      transitionName: 'fade'
     }
   }
 ];

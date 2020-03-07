@@ -8,6 +8,11 @@
       @apply mb-8;
     }
   }
+
+  .illustration {
+    @apply mx-auto;
+    max-width: 12rem;;
+  }
 }
 
 /* MD */

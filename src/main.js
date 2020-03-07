@@ -5,8 +5,7 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import routes from "./routes";
 import inViewportDirective from "vue-in-viewport-directive";
-import {aspectRatio} from "./directives/aspectRatioDirective";
-
+import { aspectRatio } from "./directives/aspectRatioDirective";
 
 // Config
 Vue.config.productionTip = false;
@@ -16,14 +15,13 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({ mode: "history", routes });
 
-// Meta
+// Router -- Meta
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title;
   next();
 });
 
-
-// Directive
+// Directives
 Vue.directive("in-viewport", inViewportDirective);
 Vue.directive("get-ratio", aspectRatio);
 
@@ -32,4 +30,3 @@ new Vue({
   render: h => h(App),
   router
 }).$mount("#app");
-

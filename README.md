@@ -43,10 +43,13 @@ Extensions: `postcss-preset-env` provides support for CSS imports, nested rules,
 1. pipeline
 2. structure
 3. fonts
-4. patterns
+4. patterns/icons
 5. transitions
-    -- add scroll smoothing library
+    x add scroll smoothing library
     x add inview directive
     -- add splitter? prob'ly not
 
 
+--- Hit list
+[] route transtions for contact
+[] on contact show different nav

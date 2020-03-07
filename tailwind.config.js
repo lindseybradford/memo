@@ -11,6 +11,9 @@ module.exports = {
       lineHeight: {
         tight: "1.1",
         snug: "1.2"
+      },
+      fontSize: {
+        "3xl": "2rem"
       }
     }
   },

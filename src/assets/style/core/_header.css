@@ -1,7 +1,9 @@
 .header-sm {
   @apply text-sm leading-snug font-medium;
 }
-
+.header-lg {
+  @apply text-3xl leading-snug font-medium;
+}
 .header-xl {
   @apply text-4xl leading-snug;
 }

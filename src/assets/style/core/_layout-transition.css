@@ -1,8 +1,48 @@
+/* Fade Default  */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition-duration: 0.4s;
+  transition-property: height, opacity;
+  will-change: height, opacity, transform;
+  transition-timing-function: ease;
+  overflow: hidden;
 }
+/* Fade */
 .fade-enter,
-.fade-leave-to {
+.fade-leave-active {
   opacity: 0;
 }
+
+/* Fade/Modal Defaults */
+.enter-modal-exit-fade-enter-active,
+.enter-modal-exit-fade-leave-active,
+.exit-modal-enter-fade-enter-active,
+.exit-modal-enter-fade-leave-active {
+  transition-property: transform, height, opacity;
+  will-change: height, opacity, transform;
+  overflow: hidden;
+} 
+
+/* Fade */
+.enter-modal-exit-fade-leave-active,
+.exit-modal-enter-fade-enter-active {
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+.enter-modal-exit-fade-leave-active,
+.exit-modal-enter-fade-enter-active {
+  opacity: 0.1;
+}
+
+/* Modal */
+.enter-modal-exit-fade-enter-active,
+.exit-modal-enter-fade-leave-active {
+  transition-duration: .6s;
+  transition-timing-function: cubic-bezier(.21,-0.02,.03,.96);
+}
+.enter-modal-exit-fade-enter,
+.exit-modal-enter-fade-leave-active {
+  transform: translate(0, -6rem);
+  opacity: 0;
+}
+

@@ -10,9 +10,11 @@
           <p>As a collective, you can hire any one of us individually, or as a team. No matter the project scope, we can leverage our roster of vetted professionals to assemble the ideal team for every project. Are you looking to take your idea, product or brand to the next level? Let’s talk.</p>
         </article>
         <div class="grid-item--aside">
-          <figure class="ratio-box" v-get-ratio="{ h: 156, w: 171 }">
-            <img src="../assets/image/illustration_01.png" class="ratio-box__inside"/>
-          </figure>
+          <div class="illustration">
+            <figure class="ratio-box" v-get-ratio="{ h: 156, w: 171 }">
+              <img src="../assets/image/illustration_01.png" class="ratio-box__inside" />
+            </figure>
+          </div>
         </div>
       </div>
     </div>

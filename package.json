@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "lazysizes": "^5.2.0",
+    "magic-scroll.js": "^1.0.8",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",

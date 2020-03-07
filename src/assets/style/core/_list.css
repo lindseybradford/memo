@@ -1,0 +1,23 @@
+.list--social {
+    max-width: 7.75rem;
+  .list-item {
+    @apply text-sm font-normal leading-none mb-3;
+
+    &__link {
+        @apply flex justify-between;
+    }
+
+    &__name {
+        @apply border-b border-transparent;
+    }
+    &__icon {
+        @apply w-4 h-4;
+    }
+
+    &:hover {
+        .list-item__name {
+            @apply border-black;
+        }
+    }
+  }
+}
