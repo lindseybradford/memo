@@ -13,7 +13,7 @@
           </tbody>
         </div>
         <table class="standard-table__main table">
-           <!-- overflow-fade overflow-fade--x-axis -->
+          <!-- overflow-fade overflow-fade--x-axis -->
           <thead>
             <tr>
               <td></td>
@@ -43,14 +43,13 @@
     </div>
   </section>
 </template>
-
 <script>
-import { store } from "../content/store.js"
+import { store } from "../content/store.js";
 export default {
   data() {
     return {
       content: store.content
-    }
+    };
   }
-}
+};
 </script>

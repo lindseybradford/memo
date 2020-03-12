@@ -50,6 +50,23 @@ export const store = {
         name: "Creative Direction",
         ratings: ["empty", "empty", "empty", "empty", "filled", "5/5"]
       }
-    ]
+    ],
+    clientLists: {
+      list_1: [
+        { name: "O’Reilly Media", location: "Boston, MA" },
+        { name: "Toyota Connected", location: "Dallas, TX" },
+        { name: "Founders Pledge", location: "London, UK" },
+        { name: "Abodu", location: "San Francisco, CA" },
+        { name: "Neighborhood Goods", location: "Dallas, TX" },
+        { name: "The Citizenry", location: "Dallas, TX" }
+      ],
+      list_2: [
+        { name: "Lilt", location: "San Francisco, CA" },
+        { name: "Invoiced", location: "Austin, TX" },
+        { name: "eNotes", location: "Seattle, WA" },
+        { name: "Chapter", location: "Dallas, TX" }
+      ],
+      note: "I focus on clients outisde the Silicon Valley tech giant bubble. With design, I strive to impact the bottom line and make a positive impact."
+    }
   }
 };
