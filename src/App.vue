@@ -47,9 +47,17 @@ export default {
 
       this.transitionName = transitionName;
 
-      console.log(1, "from:", fromName, "| transition:", this.transitionName, "| mode:", this.transitionMode, from);
+      console.log(
+        1,
+        "from:",
+        fromName,
+        "| transition:",
+        this.transitionName,
+        "| mode:",
+        this.transitionMode,
+        from
+      );
       // console.log(2, "to:", toName, to);
-    
 
       next();
     });

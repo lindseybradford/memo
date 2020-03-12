@@ -1,0 +1,11 @@
+.standard-table {
+
+    &__pinned {}
+    &__main {}
+
+    @screen md {
+        &__pinned {
+            @apply hidden;
+        }
+    }
+}

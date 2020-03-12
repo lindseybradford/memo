@@ -21,7 +21,7 @@
               <strong>Maecenas leo magna,</strong> porta in magna sed, lacinia sollicitudin lacus.
             </p>
             <p>
-              <a href="mailto:hello@courtneybradford.com">hello@courtneybradford.com</a>
+              <a :href="'mailto:' + content.primaryEmail">{{ content.primaryEmail }}</a>
             </p>
           </div>
         </div>
@@ -29,3 +29,13 @@
     </div>
   </section>
 </template>
+<script>
+import { store } from "../content/store.js"
+export default {
+  data() {
+    return {
+      content: store.content
+    }
+  }
+}
+</script>

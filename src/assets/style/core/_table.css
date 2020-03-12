@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  @apply w-full;
+
+  th,
+  td {
+    @apply font-normal text-center text-sm
+    p-2;
+  }
+
+  tbody {
+    tr th {
+      @apply text-left;
+    }tr td:last-child {
+      @apply text-right;
+    }
+  }
+
+  thead {
+    th {
+      @apply uppercase text-xs;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid;
+  }
+}

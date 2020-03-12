@@ -11,20 +11,14 @@
           <p>With backgrounds in film, photography and design, we work directly with our partners to provide a customized experience. We listen, we collaborate, we create. Each project is approached with purpose and curiosity, with the goal of providing optimal business value.</p>
           <p>As a collective, you can hire any one of us individually, or as a team. No matter the project scope, we can leverage our roster of vetted professionals to assemble the ideal team for every project. Are you looking to take your idea, product or brand to the next level? Let’s talk.</p>
           <h3 class="header-lg pt-4">
-            <a href="mailto:hello@courtneybradford.com">hello@courtneybradford.com</a>
+            <a :href="'mailto:' + content.primaryEmail">{{ content.primaryEmail }}</a>
           </h3>
         </div>
         <div class="grid-item--aside | top-rule">
           <ul class="list--social">
-            <li class="list-item">
-              <a class="list-item__link" href target="_blank">
-                <span class="list-item__name">Twitter</span>
-                <span class="list-item__icon">-></span>
-              </a>
-            </li>
-            <li class="list-item">
-              <a class="list-item__link" href target="_blank">
-                <span class="list-item__name">Facebook</span>
+            <li v-for="(social, index) in content.socialList" :key="'social-item-' + index" class="list-item">
+              <a class="list-item__link" :href="social.url" target="_blank">
+                <span class="list-item__name">{{ social.name }}</span>
                 <span class="list-item__icon">-></span>
               </a>
             </li>
@@ -34,3 +28,13 @@
     </div>
   </section>
 </template>
+<script>
+import { store } from "../content/store.js"
+export default {
+  data() {
+    return {
+      content: store.content
+    }
+  }
+}
+</script>
