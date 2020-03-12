@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="memo__contact | will-change--page-transition">
         <contactIntro />
     </div>
 </template>

@@ -1,5 +1,6 @@
 export const store = {
   content: {
+    fullName: "Courtney Bradford",
     primaryEmail: "hello@courtneybradford.com",
     socialList: [
       { name: "Twitter", url: "https://twitter.com/courtney" },

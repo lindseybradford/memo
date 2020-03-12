@@ -1,7 +1,7 @@
 <template>
   <div class="site-menu | grid grid--primary">
     <div class="site-menu__name | grid-item--aside">
-      <router-link to="/" class="site-menu__name__link">First Last</router-link>
+      <router-link to="/" class="site-menu__name__link">{{ content.fullName }}</router-link>
     </div>
     <nav class="site-menu__nav | grid-item--main">
       <a href="#" class="site-menu__nav__link">Journal</a>
@@ -11,5 +11,12 @@
 </template>
 
 <script>
-export default {};
+import { store } from "../content/store.js";
+export default {
+  data() {
+    return {
+      content: store.content
+    };
+  }
+};
 </script>

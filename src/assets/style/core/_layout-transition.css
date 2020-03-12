@@ -3,7 +3,6 @@
 .fade-leave-active {
   transition-duration: 0.4s;
   transition-property: height, opacity;
-  will-change: height, opacity, transform;
   transition-timing-function: ease;
   overflow: hidden;
 }
@@ -19,7 +18,6 @@
 .exit-modal-enter-fade-enter-active,
 .exit-modal-enter-fade-leave-active {
   transition-property: transform, height, opacity;
-  will-change: height, opacity, transform;
   overflow: hidden;
 } 
 
@@ -46,3 +44,8 @@
   opacity: 0;
 }
 
+
+
+.will-change--page-transition {
+  will-change: transform, height, opacity;
+}

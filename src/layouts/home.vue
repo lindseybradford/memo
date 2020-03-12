@@ -1,5 +1,5 @@
 <template>
-  <div class="memo__home">
+  <div class="memo__home | will-change--page-transition">
     <home-intro v-in-viewport class="section--hero" />
     <home-skillset v-in-viewport />
     <home-process v-in-viewport />
