@@ -1,15 +1,21 @@
 <template>
-    <div class="memo__404 | will-change--page-transition">
-        <h2>-- 404 --</h2>
-        <button @click.prevent="back">Go Back</button>
+  <section class="section section--hero | grid grid--primary">
+    <div class="section__main | grid-item--main">
+      <article class="section__main__content">
+        <div class="article">
+            <p>You've found an exception to the rules.</p>
+            <p><button @click.prevent="back">Go back</button></p>
+        </div>
+      </article>
     </div>
+  </section>
 </template>
-<script>
+<script>    
 export default {
-    methods: {
-        back() {
-            this.$router.go(-1);
-        }
+  methods: {
+    back() {
+        console.log("state from error: ", history.state)
     }
-}
+  }
+};
 </script>

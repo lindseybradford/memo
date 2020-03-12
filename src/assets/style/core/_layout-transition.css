@@ -45,7 +45,3 @@
 }
 
 
-
-.will-change--page-transition {
-  will-change: transform, height, opacity;
-}
