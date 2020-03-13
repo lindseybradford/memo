@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* autoprefixer: off */
 @import './core/_article.css';
 @import './core/_fundamental.css';
 @import './core/_header.css';
@@ -15,3 +16,4 @@
 @import './components/_site-menu.css';
 @import './components/_standard-table.css';
 @import './components/_portfolio-card.css';
+/* autoprefixer: on */

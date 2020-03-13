@@ -16,8 +16,7 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
-    "vue-in-viewport-directive": "^2.0.0",
-    "vue-router": "^3.1.5"
+    "vue-in-viewport-directive": "^2.0.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
@@ -27,6 +26,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "tailwindcss": "*",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

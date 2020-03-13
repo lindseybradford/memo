@@ -3,18 +3,20 @@
     <div class="section__main | grid-item--main">
       <article class="section__main__content">
         <div class="article">
-            <p>You've found an exception to the rules.</p>
-            <p><button @click.prevent="back">Go back</button></p>
+          <p>You've found an exception to the rules.</p>
+          <p>
+            <a href="/home" @click.prevent="linkTo('home')">Go back</a>
+          </p>
         </div>
       </article>
     </div>
   </section>
 </template>
-<script>    
+<script>
 export default {
   methods: {
-    back() {
-        console.log("state from error: ", history.state)
+    linkTo(state) {
+      this.$emit("update-component", state);
     }
   }
 };

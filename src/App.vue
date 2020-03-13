@@ -9,12 +9,6 @@
 </template>
 
 <script>
-// import contact from "./layouts/contact.vue";
-// import home from "./layouts/home.vue";
-import MagicScroll from "magic-scroll.js";
-// import siteMenu from "./components/siteMenu.vue";
-// import transitionPage from "./components/transitionPage.vue";
-
 export default {
   name: "memo",
   data() {
@@ -25,7 +19,7 @@ export default {
   components: {
     contact: () => import("./layouts/contact"),
     home: () => import("./layouts/home"),
-    MagicScroll,
+    // MagicScroll,
     transitionPage: () => import("./components/transitionPage"),
     siteMenu: () => import("./components/siteMenu")
   },
@@ -41,10 +35,10 @@ export default {
       if (window.location.pathname == "/contact")
         this.currentComponent = "contact";
       else this.currentComponent = "home";
-      new MagicScroll({
-        speed: 80,
-        smooth: 14
-      });
+      // new MagicScroll({
+      //   speed: 80,
+      //   smooth: 14
+      // });
     }
   }
 };
