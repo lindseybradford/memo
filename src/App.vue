@@ -11,6 +11,59 @@
 <script>
 export default {
   name: "memo",
+  metaInfo: {
+    link: [{ rel: "canonical", href: "https://www.courtneybradford.com" }],
+    title: "Memo",
+    titleTemplate: "Courtney Bradford ← %s",
+    meta: [
+      { name: "description", content: "Memo description." },
+      { "http-equiv": "Content-Type", content: "text/html; charset=utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+      // OpenGraph data (Most widely used)
+      { property: "og:title", content: "Courtney Bradford ← Memo" },
+      { property: "og:site_name", content: "Memo" },
+      // The list of types is available here: http://ogp.me/#types
+      { property: "og:type", content: "website" },
+      // Should the the same as your canonical link, see below.
+      {
+        property: "og:url",
+        content: "https://www.courtneybradford.com"
+      },
+      {
+        property: "og:image",
+        content: "https://www.courtneybradford.com/meta-image.jpg"
+      },
+      // Often the same as your meta description, but not always.
+      { property: "og:description", content: "I have things here on Memo." },
+
+      // Twitter card
+      { name: "twitter:card", content: "summary" },
+      {
+        name: "twitter:site",
+        content: "https://www.courtneybradford.com"
+      },
+      { name: "twitter:title", content: "Courtney Bradford ← Memo" },
+      {
+        name: "twitter:description",
+        content: "I have things here on Memo."
+      },
+      // Your twitter handle, if you have one.
+      { name: "twitter:creator", content: "@courtney271" },
+      {
+        name: "twitter:image:src",
+        content: "https://www.courtneybradford.com/meta-image.jpg"
+      },
+
+      // Google / Schema.org markup:
+      { itemprop: "name", content: "Courtney Bradford ← Memo" },
+      { itemprop: "description", content: "I have things here on Memo." },
+      {
+        itemprop: "image",
+        content: "https://www.courtneybradford.com/meta-image.jpg"
+      }
+    ]
+  },
   data() {
     return {
       currentComponent: "home"

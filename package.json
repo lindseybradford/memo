@@ -16,7 +16,8 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
-    "vue-in-viewport-directive": "^2.0.0"
+    "vue-in-viewport-directive": "^2.0.0",
+    "vue-meta": "^2.3.3"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",

@@ -7,7 +7,8 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     /^(?!(|.*?:)cursor-move).+-move$/,
     /^router-link(|-exact)-active$/,
     /data-v-.*/,
-    "body", "html"
+    /^body$/,
+    /^html$/
   ],
 
   // Include any special characters you're using in this regular expression

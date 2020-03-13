@@ -1,14 +1,17 @@
 <template>
-    <div class="memo__contact | will-change--page-transition">
-        <contactIntro />
-    </div>
+  <div class="memo__contact | will-change--page-transition">
+    <contactIntro />
+  </div>
 </template>
 <script>
-import contactIntro from '../components/contactIntro'
+import contactIntro from "../components/contactIntro";
 export default {
-    name: 'Contact',
-    components: {
-        contactIntro
-    }
-}
+  name: "Contact",
+  metaInfo: {
+    title: "Contact"
+  },
+  components: {
+    contactIntro
+  }
+};
 </script>
