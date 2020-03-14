@@ -9,65 +9,73 @@
 </template>
 
 <script>
+const meta = {
+  fullName: "Courtney Bradford",
+  primaryDomain: "https://www.courtneybradford.com",
+  siteName: "Memo",
+  siteDescription: "Descriptive, brief.",
+  twitterHandle: "courtney271"
+};
 export default {
   name: "memo",
+  data() {
+    return {
+      currentComponent: "home"
+    };
+  },
+
   metaInfo: {
-    link: [{ rel: "canonical", href: "https://www.courtneybradford.com" }],
-    title: "Memo",
-    titleTemplate: "Courtney Bradford ← %s",
+    link: [{ rel: "canonical", href: meta.primaryDomain }],
+    title: meta.siteName,
+    titleTemplate: meta.fullName + " ← %s",
     meta: [
-      { name: "description", content: "Memo description." },
+      { name: "description", content: meta.siteDescription },
       { "http-equiv": "Content-Type", content: "text/html; charset=utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
 
       // OpenGraph data (Most widely used)
-      { property: "og:title", content: "Courtney Bradford ← Memo" },
-      { property: "og:site_name", content: "Memo" },
+      { property: "og:title", content: meta.fullName + " ← " + meta.siteName },
+      { property: "og:site_name", content: meta.siteName },
       // The list of types is available here: http://ogp.me/#types
       { property: "og:type", content: "website" },
       // Should the the same as your canonical link, see below.
       {
         property: "og:url",
-        content: "https://www.courtneybradford.com"
+        content: meta.primaryDomain
       },
       {
         property: "og:image",
-        content: "https://www.courtneybradford.com/meta-image.jpg"
+        content: "https://www.courtneybradford.com/og-meta-image.jpg"
       },
       // Often the same as your meta description, but not always.
-      { property: "og:description", content: "I have things here on Memo." },
+      { property: "og:description", content: meta.siteDescription },
 
       // Twitter card
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:site",
-        content: "https://www.courtneybradford.com"
+        content: meta.primaryDomain
       },
-      { name: "twitter:title", content: "Courtney Bradford ← Memo" },
+      { name: "twitter:title", content: meta.fullName + " ← " + meta.siteName },
       {
         name: "twitter:description",
-        content: "I have things here on Memo."
+        content: meta.siteDescription
       },
       // Your twitter handle, if you have one.
-      { name: "twitter:creator", content: "@courtney271" },
+      { name: "twitter:creator", content: "@" + meta.twitterHandle },
       {
         name: "twitter:image:src",
-        content: "https://www.courtneybradford.com/meta-image.jpg"
+        content: "https://www.courtneybradford.com/twitter-meta-image.jpg"
       },
 
       // Google / Schema.org markup:
-      { itemprop: "name", content: "Courtney Bradford ← Memo" },
-      { itemprop: "description", content: "I have things here on Memo." },
+      { itemprop: "name", content: meta.fullName + " ← " + meta.siteName },
+      { itemprop: "description", content: meta.siteDescription },
       {
         itemprop: "image",
-        content: "https://www.courtneybradford.com/meta-image.jpg"
+        content: "https://www.courtneybradford.com/seo-meta-image.jpg"
       }
     ]
-  },
-  data() {
-    return {
-      currentComponent: "home"
-    };
   },
   components: {
     contact: () => import("./layouts/contact"),

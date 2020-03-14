@@ -21,7 +21,7 @@
               <strong>Maecenas leo magna,</strong> porta in magna sed, lacinia sollicitudin lacus.
             </p>
             <p>
-              <a :href="'mailto:' + content.primaryEmail">{{ content.primaryEmail }}</a>
+              <a class="text-lg" :href="'mailto:' + content.primaryEmail">{{ content.primaryEmail }}</a>
             </p>
           </div>
         </div>

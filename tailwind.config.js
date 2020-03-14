@@ -1,10 +1,11 @@
 // tailwind.config.js
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   theme: {
     extend: {
       colors: {
         black: "#2B3727",
-        blue: "#D7EBEC",
+        blue: "#D7EBEC", // bg color
         cream: "#F7F4F0",
         yellow: "#F2C94C"
       },
@@ -14,6 +15,9 @@ module.exports = {
       },
       fontSize: {
         "3xl": "2rem"
+      },
+      fontFamily: {
+        mono: "Mono, SFMono-Regular, Menlo"
       }
     }
   },
@@ -21,5 +25,16 @@ module.exports = {
   corePlugins: {
     gridTemplateColumns: false
   },
-  plugins: []
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        // bg gradient color (rgba should match primary hex above)
+        ".gradient-fade-lr": {
+          background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(215, 235, 236, 1) 100%)"
+        }
+      };
+
+      addUtilities(newUtilities);
+    })
+  ]
 };

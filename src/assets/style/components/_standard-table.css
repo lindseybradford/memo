@@ -1,11 +1,114 @@
+:root {
+  --pinned-w: 15rem;
+}
+
 .standard-table {
+  @apply relative font-mono;
 
-    &__pinned {}
-    &__main {}
+  &__pinned {
+    @apply absolute z-10 left-0 top-0 
+    overflow-hidden overflow-x-scroll 
+    bg-blue border-black border-r;
+    padding-top: 2.1875rem;
+    width: var(--pinned-w);
 
-    @screen md {
-        &__pinned {
-            @apply hidden;
-        }
+    tr td {
+      @apply text-left;
     }
+  }
+  &__main {
+    @apply relative overflow-scroll overflow-y-hidden;
+
+    table {
+      margin-left: var(--pinned-w);
+    }
+
+    thead td:first-child,
+    th[scope="row"] {
+      @apply hidden;
+    }
+    tr td:last-child {
+      @apply pr-8;
+    }
+  }
+
+  @screen lg {
+    &__pinned {
+      @apply hidden;
+    }
+    &__main {
+      table {
+        @apply ml-0;
+      }
+      tr td:last-child {
+        @apply pr-2;
+      }
+    }
+    thead td:first-child,
+    th[scope="row"] {
+      @apply block;
+    }
+  }
+}
+
+/* Scroll Prompt */
+.standard-table {
+  &:after {
+    content: "";
+    @apply absolute right-0 z-20 h-4 w-4;
+    background-image: url("../svg/keyboard-arrow-right.svg");
+    background-repeat: no-repeat;
+    bottom: -2rem;
+
+    animation-name: arrowRight;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.65, 0.46, 0.6, 0.92);
+    animation-iteration-count: infinite;
+  
+    @screen lg {
+      @apply hidden;
+    }
+  }
+}
+@keyframes arrowRight {
+  0 {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1rem, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* Table Text, Data */
+.standard-table {
+  th,
+  td {
+    @apply font-normal text-center text-sm
+      p-2;
+  }
+  th {
+    @apply uppercase text-xs tracking-wide;
+  }
+  th[scope="row"] {
+    @apply text-left;
+  }
+  tr {
+    border-bottom: 1px solid;
+  }
+}
+.table-meta {
+  @apply text-xs;
+}
+.ballot-marker {
+  @apply h-3 w-3 bg-white rounded-full 
+          block mx-auto;
+  &__scratch {
+    @apply h-3 w-3 block relative;
+    background-image: url("../svg/scratch.svg");
+    background-repeat: no-repeat;
+    top: 1px;
+    left: 1px;
+  }
 }

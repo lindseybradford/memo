@@ -1,0 +1,13 @@
+.lg\:overflow-content-r {
+  @apply relative;
+  &:after {
+    content: "";
+    @apply absolute z-10 h-full w-10 right-0 top-0 gradient-fade-lr;
+  }
+}
+
+@screen lg {
+  .lg\:overflow-content-r:after {
+    @apply hidden;
+  }
+}

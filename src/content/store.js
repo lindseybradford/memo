@@ -2,11 +2,16 @@ export const store = {
   content: {
     fullName: "Courtney Bradford",
     primaryEmail: "hello@courtneybradford.com",
+    primaryDomain: "https://www.courtneybradford.com",
+    siteName: "Memo",
+    siteDescription: "Descriptive, brief.",
+    twitterHandle: "courtney271",
     socialList: [
-      { name: "Twitter", url: "https://twitter.com/courtney" },
+      { name: "Twitter", url: "https://twitter.com/courtney271" },
       { name: "Instagram", url: "https://instagram.com/courtney" }
     ],
     skillset: [
+      // nope, so-so, descent, good, hell yeah
       {
         name: "UX/UI Design",
         ratings: ["empty", "empty", "empty", "empty", "filled", "5/5"]
@@ -17,11 +22,11 @@ export const store = {
       },
       {
         name: "Prototyping",
-        ratings: ["empty", "empty", "empty", "empty", "filled", "4/5"]
+        ratings: ["empty", "empty", "empty", "filled", "empty", "4/5"]
       },
       {
         name: "Interaction Design",
-        ratings: ["empty", "empty", "empty", "empty", "filled", "5/5"]
+        ratings: ["empty", "empty", "empty", "filled", "empty", "5/5"]
       },
       {
         name: "Information Architecture",
@@ -29,7 +34,7 @@ export const store = {
       },
       {
         name: "HTML/CSS",
-        ratings: ["empty", "empty", "empty", "empty", "filled", "2/5"]
+        ratings: ["empty", "filled", "empty", "empty", "empty", "2/5"]
       },
       {
         name: "Product Strategy",
@@ -45,7 +50,7 @@ export const store = {
       },
       {
         name: "Illustration",
-        ratings: ["empty", "empty", "empty", "empty", "filled", "1/5"]
+        ratings: ["filled", "empty", "empty", "empty", "empty", "1/5"]
       },
       {
         name: "Creative Direction",
