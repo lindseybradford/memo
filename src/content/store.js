@@ -11,7 +11,7 @@ export const store = {
       { name: "Instagram", url: "https://instagram.com/courtney" }
     ],
     skillset: [
-      // nope, so-so, descent, good, hell yeah
+      // [nope, so-so, descent, good, hell yeah]
       {
         name: "UX/UI Design",
         ratings: ["empty", "empty", "empty", "empty", "filled", "5/5"]

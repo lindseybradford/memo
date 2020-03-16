@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <site-menu @update-component="updateComponent" />
+    <site-menu @update-component="updateComponent" :currently-viewing="currentComponent" />
 
     <transition-page :state="currentComponent">
       <Component :is="currentComponent" />

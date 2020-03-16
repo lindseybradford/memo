@@ -1,0 +1,25 @@
+.hover\:rotate-icon--d {
+    .icon {
+      transition: transform 0.3s var(--transition-curve);
+      transform: rotate(-45deg);
+    }
+  
+    &:hover {
+      .icon {
+        transform: rotate(0);
+      }
+    }
+  }
+  
+/* .hover\:bump-icon--r {
+  .icon {
+    transition: transform 0.3s var(--transition-curve);
+    transform: translate(0, 0);
+  }
+
+  &:hover {
+    .icon {
+      transform: translate(0.25rem, 0);
+    }
+  }
+} */

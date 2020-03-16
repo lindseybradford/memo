@@ -16,10 +16,14 @@
         </div>
         <div class="grid-item--aside | top-rule">
           <ul class="list--social">
-            <li v-for="(social, index) in content.socialList" :key="'social-item-' + index" class="list-item">
-              <a class="list-item__link" :href="social.url" target="_blank">
+            <li
+              v-for="(social, index) in content.socialList"
+              :key="'social-item-' + index"
+              class="list-item"
+            >
+              <a class="list-item__link | hover:rotate-icon--d" :href="social.url" target="_blank">
                 <span class="list-item__name">{{ social.name }}</span>
-                <span class="list-item__icon">-></span>
+                <arrowRight class="list-item__icon" />
               </a>
             </li>
           </ul>
@@ -29,12 +33,16 @@
   </section>
 </template>
 <script>
-import { store } from "../content/store.js"
+import { store } from "../content/store.js";
+import arrowRight from "../icons/keyboard-arrow-right";
 export default {
   data() {
     return {
       content: store.content
-    }
+    };
+  },
+  components: {
+    arrowRight
   }
-}
+};
 </script>

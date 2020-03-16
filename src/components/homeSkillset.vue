@@ -4,7 +4,7 @@
       <h3 class="header-sm">My skillset</h3>
     </div>
     <div class="section__main | grid-item--main | lg:overflow-content-r">
-      <div class="section__main__content | standard-table">
+      <div class="section__main__content | standard-table" :class="{'-hide-scroll-prompt': hideScrollPrompt}">
         <div aria-hidden="true" class="standard-table__pinned">
           <table>
             <thead>
@@ -15,7 +15,7 @@
           </table>
         </div>
         <div class="standard-table__main">
-          <table class="table">
+          <table class="table" @click="onTableScroll">
             <thead>
               <tr>
                 <td></td>
@@ -49,8 +49,15 @@ import { store } from "../content/store.js";
 export default {
   data() {
     return {
-      content: store.content
+      content: store.content,
+      hideScrollPrompt: false
     };
+  },
+  methods: {
+    onTableScroll() {
+      // Change this to an actual scroll/drag motion event !important! 
+      this.hideScrollPrompt = true
+    }
   }
 };
 </script>

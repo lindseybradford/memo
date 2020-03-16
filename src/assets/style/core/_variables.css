@@ -1,0 +1,4 @@
+:root {
+  --pinned-w: 15rem;
+  --transition-curve: cubic-bezier(0.64, 0.46, 0.6, 0.92);
+}

@@ -8,8 +8,9 @@
       >{{ content.fullName }}</a>
     </div>
     <nav class="site-menu__nav | grid-item--main">
-      <a href="/" class="site-menu__nav__link">Journal</a>
-      <a href="/contact" @click.prevent="linkTo('contact')" class="site-menu__nav__link">Contact</a>
+      <a v-if="currentlyViewing !== 'contact'" href="/" class="site-menu__nav__link">Journal</a>
+      <a v-if="currentlyViewing !== 'contact'" href="/contact" @click.prevent="linkTo('contact')" class="site-menu__nav__link">Contact</a>
+      <a v-if="currentlyViewing == 'contact'" href="/" @click.prevent="linkTo('home')" class="site-menu__nav__link">Close</a>
     </nav>
   </div>
 </template>
@@ -17,6 +18,12 @@
 <script>
 import { store } from "../content/store.js";
 export default {
+  props: {
+    currentlyViewing: {
+      required: true,
+      type: String
+    }
+  },
   data() {
     return {
       content: store.content
