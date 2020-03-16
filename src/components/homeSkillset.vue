@@ -4,7 +4,10 @@
       <h3 class="header-sm">My skillset</h3>
     </div>
     <div class="section__main | grid-item--main | lg:overflow-content-r">
-      <div class="section__main__content | standard-table" :class="{'-hide-scroll-prompt': hideScrollPrompt}">
+      <div
+        class="section__main__content | standard-table"
+        :class="{'-hide-scroll-prompt': hideScrollPrompt}"
+      >
         <div aria-hidden="true" class="standard-table__pinned">
           <table>
             <thead>
@@ -15,7 +18,7 @@
           </table>
         </div>
         <div class="standard-table__main">
-          <table class="table" @click="onTableScroll">
+          <table class="table" @dragenter.once="onTableScroll" @mouseenter.once="onTableScroll">
             <thead>
               <tr>
                 <td></td>
@@ -55,8 +58,7 @@ export default {
   },
   methods: {
     onTableScroll() {
-      // Change this to an actual scroll/drag motion event !important! 
-      this.hideScrollPrompt = true
+      this.hideScrollPrompt = true;
     }
   }
 };
