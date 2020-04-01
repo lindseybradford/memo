@@ -1,3 +1,4 @@
 module.exports = {
-  outputDir: 'public'
-}
+  // outputDir: "docs",
+  configureWebpack: {}
+};

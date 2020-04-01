@@ -8,19 +8,28 @@
         <div class="grid -edge-to-edge grid--card">
           <div class="portfolio-card | grid-item">
             <figure class="ratio-box lazy--standard-effect" v-get-ratio="{ h: 580, w: 870 }">
-              <img src="../assets/image/figure_01.jpg" class="ratio-box__inside" />
+              <img
+                :data-src="require('../assets/image/figure_01.jpg')"
+                class="lazyload | ratio-box__inside"
+              />
             </figure>
             <figcaption>Chapter, Design System & UI/UX</figcaption>
           </div>
           <div class="portfolio-card | grid-item">
             <figure class="ratio-box lazy--standard-effect" v-get-ratio="{ h: 580, w: 870 }">
-              <img src="../assets/image/figure_02.jpg" class="ratio-box__inside" />
+              <img
+                :data-src="require('../assets/image/figure_01.jpg')"
+                class="lazyload | ratio-box__inside"
+              />
             </figure>
             <figcaption>Chapter, Design System & UI/UX</figcaption>
           </div>
           <div class="portfolio-card | grid-item">
             <figure class="ratio-box lazy--standard-effect" v-get-ratio="{ h: 580, w: 870 }">
-              <img src="../assets/image/figure_03.jpg" class="ratio-box__inside" />
+              <img
+                :data-src="require('../assets/image/figure_01.jpg')"
+                class="lazyload | ratio-box__inside"
+              />
             </figure>
             <figcaption>Chapter, Design System & UI/UX</figcaption>
           </div>

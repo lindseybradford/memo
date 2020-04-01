@@ -1,3 +1,8 @@
-.lazy--standard-effect {
-    @apply bg-cream
+[data-src] {
+  opacity: 0.01;
+  transition: opacity 450ms ease-in-out 50ms;
 }
+
+[data-src].lazyloaded {
+  opacity: 1;
+} 

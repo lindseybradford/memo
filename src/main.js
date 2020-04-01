@@ -1,14 +1,14 @@
 // Imports
 import Vue from "vue";
 import App from "./App.vue";
-import Meta from 'vue-meta';
-
 import inViewportDirective from "vue-in-viewport-directive";
+import Meta from "vue-meta";
+import "lazysizes";
 import { aspectRatio } from "./directives/aspectRatioDirective";
 
 // Config
 Vue.config.productionTip = false;
-Vue.use(Meta)
+Vue.use(Meta);
 
 // Directives
 Vue.directive("in-viewport", inViewportDirective);

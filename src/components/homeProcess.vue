@@ -12,7 +12,10 @@
         <div class="grid-item--aside">
           <div class="illustration">
             <figure class="ratio-box" v-get-ratio="{ h: 156, w: 171 }">
-              <img src="../assets/image/illustration_01.png" class="ratio-box__inside" />
+              <img
+                :data-src="require('../assets/image/illustration_01.png')"
+                class="lazyload | ratio-box__inside"
+              />
             </figure>
           </div>
         </div>

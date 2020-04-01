@@ -2,7 +2,7 @@
   <section class="section | grid grid--primary">
     <div class="section__aside | grid-item--aside | top-rule">
       <figure class="ratio-box" v-get-ratio="{ h: 258, w: 258 }">
-        <img src="../assets/image/profile_01.png" class="ratio-box__inside" />
+        <img :data-src="require('../assets/image/profile_01.png')" class="lazyload | ratio-box__inside" />
       </figure>
     </div>
     <div class="section__main | grid-item--main">
@@ -38,7 +38,8 @@ import arrowRight from "../icons/keyboard-arrow-right";
 export default {
   data() {
     return {
-      content: store.content
+      content: store.content,
+      publicPath: process.env.BASE_URL
     };
   },
   components: {
