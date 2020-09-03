@@ -10,7 +10,7 @@
   "dependencies": {
     "copy-webpack-plugin": "^5.1.1",
     "core-js": "^3.6.4",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.1",
     "magic-scroll.js": "^1.0.8",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
